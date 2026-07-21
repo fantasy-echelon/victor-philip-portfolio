@@ -40,23 +40,24 @@ header {
     padding: 15px 20px;
 
     position: relative;
-
+  
+    gap: 15px;
 }
 
 header h1 {
-
     color: #D4AF37;
-
-    font-size: 1.8rem;
-
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
     font-weight: 800;
-
-    letter-spacing: 1px;
-
+    letter-spacing: .5px;
     margin: 0;
 
-}
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
+    flex: 1;
+    min-width: 0;
+}
 /* ==========================
    MENU BUTTON
 ========================== */
@@ -484,7 +485,12 @@ nav a:hover {
 }
 
 .project-card.expanded .full-text {
-
+   top: 70px;
+   bottom: 70px;
+   left: 30px;
+   right: 30px;
+   transform: none;
+   overflow-y: auto;
     display: block;
 }
 
